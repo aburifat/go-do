@@ -1,0 +1,28 @@
+@id1 = 20241219041719
+@id2 = 20241219041719
+
+POST http://localhost:8000/todos HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Hello World!",
+    "completed": false
+}
+
+###
+GET http://localhost:8000/todos http/1.1
+
+###
+GET http://localhost:8000/todos/{{id1}} http/1.1
+
+###
+PUT http://localhost:8000/todos/{{id1}} http/1.1
+
+{
+    "id": "20241219041719",
+    "title": "The great task 2",
+    "completed": false
+}
+
+###
+DELETE http://localhost:8000/todos/{{id2}} http/1.1
